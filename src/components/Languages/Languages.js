@@ -7,7 +7,6 @@ export default class Languages extends React.Component {
 
   onLanguageSelected(text){
     this.props.dispatch(changeLanguage(text));
-    // this.props.onClick(text);
   }
 
   render() {
