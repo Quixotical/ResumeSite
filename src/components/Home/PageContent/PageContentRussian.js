@@ -19,10 +19,14 @@ export const PageContentRussian = (props) => {
       </div>
       <div className='sub-text'>
         <h3>
-          Learning has always been my greatest passion. I believe that it is
-          on the journey of discovery that we truly feel alive and often it is where
-          we learn the most about ourselves. I appreciate you taking the time to
-          look at my website.
+          Это всегда было моя привычка погружаться на что-нибудь я изучал потому
+          что мне интересно обогащаю мою жизнь, и когда я учусь, я могу чувствовать,
+          что мне нравиться учить. Я верю, если мы следимся когда мы пытаемся
+          понимать что-то нового, мы можем заметить что, для нас, это замечательное
+           время. Мне кажется, в течение того, когда мы учимся, мы не только понимать
+            предмет о чём мы концентрируем, но одновременна мы начинаем понимать
+             что-то в нашем внутренных мирах тоже. Спасибо, добро пожаловать.
+
         </h3>
       </div>
     </div>
