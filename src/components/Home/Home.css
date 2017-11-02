@@ -9,4 +9,14 @@
 
 .home .avatar {
   flex: 1;
+  display: flex;
+  flex-flow:nowrap;
+  align-items: center;
+}
+
+@media screen and (min-width:680px){
+  .home .avatar img {
+    width:100%;
+    height:100%;
+  }
 }
