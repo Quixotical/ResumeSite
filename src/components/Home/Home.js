@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './Home.css';
 
 import { Avatar } from '../Avatar/Avatar';
@@ -6,23 +7,30 @@ import { PageContentEnglish } from './PageContent/PageContentEnglish';
 import { PageContentJapanese } from './PageContent/PageContentJapanese';
 import { PageContentRussian } from './PageContent/PageContentRussian';
 
-export const Home = (props) => {
-  return (
-    <div className='home'>
-        <Avatar fileName='main-pic.jpg'/>
-        {
-          props.language === 'English' &&
-          <PageContentEnglish />
-        }
-        {
-          props.language === 'Русский' &&
-          <PageContentRussian />
-        }
-        {
-          props.language === '日本語' &&
-          <PageContentJapanese />
-        }
+@connect((store) => {
+  return {language: store.languageChange.language}
+})
+export default class Home extends React.Component {
 
-    </div>
-  )
+  render() {
+    return (
+      <div className='home'>
+          <Avatar fileName='main-pic.jpg'/>
+          {
+            this.props.language === 'English' &&
+            <PageContentEnglish />
+          }
+          {
+            this.props.language === 'Русский' &&
+            <PageContentRussian />
+          }
+          {
+            this.props.language === '日本語' &&
+            <PageContentJapanese />
+          }
+
+      </div>
+    )
+  }
+
 }

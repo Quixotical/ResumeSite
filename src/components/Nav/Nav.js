@@ -11,13 +11,13 @@ export const Nav = (props) => {
         navLinks.map((link, idx) => (
           idx === 0 ?
             (
-              <li>
+              <li key={link}>
                 <NavLink exact activeClassName='active' to='/'>{link}</NavLink>
               </li>
             )
           :
           (
-            <li>
+            <li key={link}>
               <NavLink activeClassName='active' to='/Posts'>{link}</NavLink>
             </li>
           )

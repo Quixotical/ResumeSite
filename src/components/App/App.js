@@ -3,30 +3,28 @@ import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import { Footer } from '../Footer/Footer';
-import { Home } from '../Home/Home.js';
+import Home from '../Home/Home.js';
 import { Projects } from '../Projects/Projects.js';
 import { Posts } from '../Posts/Posts.js';
 import { About } from '../About/About.js';
 import { Resume } from '../Resume/Resume.js';
 import { Links } from '../Links/Links.js';
 import Header  from '../Header/Header';
+import { connect } from 'react-redux';
 
+@connect((store) => {
+  return {
+    language: store.languageChange.language
+  }
+})
 class App extends Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      language: 'English'
-    };
   }
 
-  onLanguageChange = (language) => {
-    this.setState({language})
-  };
-
   render() {
-    const {language} = this.state;
+    const language = this.props.language;
     let notFound = 'This page is still under construction';
 
     if (language === 'Русский'){
@@ -39,10 +37,10 @@ class App extends Component {
         <div className='container'>
           <Router>
             <div>
-              <Header language={language} onClick={(language) => this.onLanguageChange(language)}/>
+              <Header language={language} />
               <div className='main-body'>
                 <Switch>
-                  <Route exact path='/' render={()=><Home language={language}/>} language={language}/>
+                  <Route exact path='/' render={()=><Home />} />
                   <Route path='/projects' render={() => {
                     return <p>{notFound}</p>
                   }} />

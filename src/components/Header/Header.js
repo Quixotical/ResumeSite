@@ -35,7 +35,7 @@ export default class Header extends React.Component {
           title
         }
         <Nav language={this.props.language} navLinks={navLinks}/>
-        <Languages languages={['English','Русский','日本語']} onClick={this.props.onClick}/>
+        <Languages languages={['English','Русский','日本語']} />
       </div>
     )
   }
