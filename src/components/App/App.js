@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import { Footer } from '../Footer/Footer';
 import Home from '../Home/Home.js';
@@ -76,5 +77,10 @@ class App extends Component {
     );
   }
 }
-
+App.propTypes = {
+  language: PropTypes.string.isRequired
+}
+App.defaultProps = {
+  language: 'English'
+}
 export default App;

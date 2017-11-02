@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { changeLanguage } from '../../actions/languageActions';
 
@@ -25,4 +26,10 @@ export default class Languages extends React.Component {
       </div>
     )
   }
+}
+Languages.propTypes = {
+  languages: PropTypes.array.isRequired,
+}
+Languages.defaultProps = {
+  languages: ['oops']
 }

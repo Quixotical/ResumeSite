@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { Nav } from '../Nav/Nav';
 import Languages from '../Languages/Languages';
 import { Title } from '../Title/Title';
@@ -42,4 +44,10 @@ export default class Header extends React.Component {
       </div>
     )
   }
+}
+Header.propTypes = {
+  language: PropTypes.string.isRequired
+}
+Header.defaultProps = {
+  language: 'English'
 }

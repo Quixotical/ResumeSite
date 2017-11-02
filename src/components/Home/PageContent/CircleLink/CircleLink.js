@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const CircleLink = (props) => {
   return (
@@ -8,4 +9,12 @@ export const CircleLink = (props) => {
       </div>
     </a>
   )
+}
+CircleLink.propTypes = {
+  text: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+}
+CircleLink.defaultProps = {
+  text: 'oops',
+  color: 'red'
 }

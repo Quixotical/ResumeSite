@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Title.css';
 
 export const Title = (props) => {
@@ -12,4 +13,12 @@ export const Title = (props) => {
       </div>
     </div>
   )
+}
+Title.propTypes = {
+  name: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+}
+Title.defaultProps = {
+  name: 'John Smithy',
+  position: 'Word Smith'
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Avatar.css';
 
 export const Avatar = (props) => {
@@ -7,4 +8,7 @@ export const Avatar = (props) => {
       <img src={'/public/assets/' + props.fileName} />
     </div>
   )
+}
+Avatar.propTypes = {
+  fileName: PropTypes.string.isRequired
 }

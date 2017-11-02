@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 export const Nav = (props) => {
   let language = props.language;
   let navLinks = props.navLinks[language];
-  console.log(navLinks);
+
   return (
     <ul className='nav'>
       {
@@ -25,4 +26,12 @@ export const Nav = (props) => {
       }
     </ul>
   )
+}
+Nav.propTypes = {
+  language: PropTypes.string.isRequired,
+  navLinks: PropTypes.object.isRequired,
+}
+Nav.defaultProps = {
+  language: 'English',
+  navLinks: {English:[],Русский:[],日本語:[]},
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import './Home.css';
 
@@ -13,24 +14,29 @@ import { PageContentRussian } from './PageContent/PageContentRussian';
 export default class Home extends React.Component {
 
   render() {
+    let language = this.props.language;
     return (
       <div className='home'>
           <Avatar fileName='main-pic.jpg'/>
           {
-            this.props.language === 'English' &&
+            language === 'English' &&
             <PageContentEnglish />
           }
           {
-            this.props.language === 'Русский' &&
+            language === 'Русский' &&
             <PageContentRussian />
           }
           {
-            this.props.language === '日本語' &&
+            language === '日本語' &&
             <PageContentJapanese />
           }
-
       </div>
     )
   }
-
+}
+Home.propTypes = {
+  language: PropTypes.string.isRequired
+}
+Home.defaultProps = {
+  language: 'English'
 }
