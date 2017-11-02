@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import './Languages.css';
 import { changeLanguage } from '../../actions/languageActions';
 
 @connect()
