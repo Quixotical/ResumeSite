@@ -3,7 +3,6 @@ import './PageContent.css';
 import { CircleLink } from './CircleLink/CircleLink';
 
 export const PageContentRussian = (props) => {
-  console.log(props);
   return (
     <div className='page-content'>
       <div className='title'>
