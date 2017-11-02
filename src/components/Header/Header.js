@@ -21,20 +21,23 @@ export default class Header extends React.Component {
   }
 
   render() {
+    let language = this.props.language;
     let title = <Title name='Jake Boomgaarden' position='Software Developer'/>;
-    let navLinks = this.getNavLinks();
-    if(this.props.language === 'Русский'){
+
+    if(language === 'Русский'){
       title = <Title name='Джейк Бумгаарден' position='Программист'/>
-    } else if(this.props.language === '日本語'){
+    } else if(language === '日本語'){
       title = <Title name='ブンガーデン　ジェイク' position='ソフトウェア　エンジニア'/>
     }
+
+    let navLinks = this.getNavLinks();
 
     return (
       <div className='header'>
         {
           title
         }
-        <Nav language={this.props.language} navLinks={navLinks}/>
+        <Nav language={language} navLinks={navLinks}/>
         <Languages languages={['English','Русский','日本語']} />
       </div>
     )
