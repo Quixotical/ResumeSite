@@ -40,7 +40,7 @@ class App extends Component {
               <Header language={language} />
               <div className='main-body'>
                 <Switch>
-                  <Route exact path='/' render={()=><Home />} />
+                  <Route exact path='/' component={Home} />
                   <Route path='/projects' render={() => {
                     return <p>{notFound}</p>
                   }} />
