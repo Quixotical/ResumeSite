@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import { Footer } from '../Footer/Footer';
 import Home from '../Home/Home.js';
-import { Projects } from '../Projects/Projects.js';
+import Projects from '../Projects/Projects.js';
 import { Posts } from '../Posts/Posts.js';
 import { About } from '../About/About.js';
 import { Resume } from '../Resume/Resume.js';
@@ -42,9 +42,7 @@ class App extends Component {
               <div className='main-body'>
                 <Switch>
                   <Route exact path='/' component={Home} />
-                  <Route path='/projects' render={() => {
-                    return <p>{notFound}</p>
-                  }} />
+                  <Route path='/projects' component={Projects} />
                   <Route path='/posts' render={() => {
                     return <p>{notFound}</p>
                   }} />
@@ -57,7 +55,7 @@ class App extends Component {
                   <Route path='/links' render={() => {
                     return <p>{notFound}</p>
                   }} />
-                  {/* <Route path='/projects' component={Projects} />
+                  {/*
                   <Route path='/posts' component={Posts} />
                   <Route path='/about' component={About} />
                   <Route path='/resume' component={Resume} />
