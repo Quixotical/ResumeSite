@@ -12,6 +12,7 @@ import { Resume } from '../Resume/Resume.js';
 import { Links } from '../Links/Links.js';
 import Header  from '../Header/Header';
 import { connect } from 'react-redux';
+import { SideMenu } from '../SideMenu/SideMenu';
 
 @connect((store) => {
   return {
@@ -35,7 +36,9 @@ class App extends Component {
     }
 
     return (
+
         <div className='container'>
+          <SideMenu />
           <Router>
             <div>
               <Header language={language} />
