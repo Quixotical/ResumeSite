@@ -19,7 +19,7 @@ export const Nav = (props) => {
           :
           (
             <li key={link}>
-              <NavLink activeClassName='active' to='/Posts'>{link}</NavLink>
+              <NavLink activeClassName='active' to={'/' + link}>{link}</NavLink>
             </li>
           )
         ))
