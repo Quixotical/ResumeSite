@@ -1,0 +1,15 @@
+.projects-container {
+  display:flex;
+  flex: 1;
+  justify-content: center;
+}
+.projects {
+  display:flex;
+  flex: .8;
+  justify-content: center;
+}
+
+.projects .container {
+  display: flex;
+  flex: 1;
+}
