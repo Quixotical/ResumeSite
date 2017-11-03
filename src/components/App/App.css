@@ -1,17 +1,25 @@
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
 .main-body {
-  height: 600px;
-  border: #445577;
-  background-color: #eae5e5;
-  display: flex;
-  border-bottom: 2px solid #ccc;
+  display: none;
 }
 .footer {
-  height: 50px;
-  border: #8822ff;
-  background-color: #288cdf;
+  display: none;
+}
+@media screen and (min-width:680px){
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-body {
+    height: 600px;
+    border: #445577;
+    background-color: #eae5e5;
+    display: flex;
+    border-bottom: 2px solid #ccc;
+  }
+  .footer {
+    height: 50px;
+    border: #8822ff;
+    background-color: #288cdf;
+  }
 }

@@ -1,4 +1,25 @@
 @media screen and (min-width:680px){
+
+  .links {
+    display: flex;
+    flex-basis: 20%;
+
+  }
+  .links a {
+    cursor: pointer;
+    margin: auto 0;
+  }
+
+  .links a div p {
+    margin: auto;
+    color: white;
+    text-align: center;
+  }
+
+  .sub-text h3 {
+      margin: 0;
+  }
+
   .page-content {
     padding-left: 15px;
     display: flex;
@@ -44,25 +65,40 @@
   .title {
     flex-basis:16%;
   }
+  .sub-text {
+    margin-top:1px;
+  }
 }
 @media screen and (min-width:740px){
   .title {
     flex-basis:16%;
+  }
+  .sub-text {
+    margin-top:2px;
   }
 }
 @media screen and (min-width:770px){
   .title {
     flex-basis:17%;
   }
+  .sub-text {
+    margin-top:3px;
+  }
 }
 @media screen and (min-width:800px){
   .title {
     flex-basis:18%;
   }
+  .sub-text {
+    margin-top:4px;
+  }
 }
 @media screen and (min-width:830px){
   .title {
     flex-basis:19%;
+  }
+  .sub-text {
+    margin-top:6px;
   }
 }
 @media screen and (min-width:850px){
@@ -70,15 +106,24 @@
     width: 100px;
     height: 100px;
   }
+  .sub-text {
+    margin-top:7px;
+  }
 }
 @media screen and (min-width:870px){
   .title {
     flex-basis:20%;
   }
+  .sub-text {
+    margin-top:9px;
+  }
 }
 @media screen and (min-width:907px){
   .greeting {
     font-size: 60px;
+  }
+  .sub-text {
+    margin-top:10px;
   }
 }
 @media screen and (min-width:1020px){
@@ -88,24 +133,4 @@
   .links a div {
     margin: 15px;
   }
-}
-
-.links {
-  display: flex;
-  flex-basis: 20%;
-
-}
-.links a {
-  cursor: pointer;
-  margin: auto 0;
-}
-
-.links a div p {
-  margin: auto;
-  color: white;
-  text-align: center;
-}
-
-.sub-text h3 {
-    margin: 0;
 }
