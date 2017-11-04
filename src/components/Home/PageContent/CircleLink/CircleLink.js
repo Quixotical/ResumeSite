@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 export const CircleLink = (props) => {
   return (
-    <a href={"/" + props.text}>
-      <div style={{backgroundColor: props.color}}>
+    <div style={{backgroundColor: props.color}}>
+      <a href={"/" + props.text}>
         <p>{props.text}</p>
-      </div>
-    </a>
+      </a>
+    </div>
   )
 }
 CircleLink.propTypes = {
