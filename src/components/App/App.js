@@ -35,9 +35,9 @@ class App extends Component {
     }
 
     return (
-        <div className='container'>
+        <div >
           <Router>
-            <div>
+            <div className='container'>
               <Header language={language} />
               <div className='main-body'>
                 <Switch>
