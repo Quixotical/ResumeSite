@@ -1,9 +1,15 @@
 .main-body {
-  display: none;
+  border: #445577;
+  background-color: #eae5e5;
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  min-height:600px;
 }
 .footer {
-  display: none;
+  border: #8822ff;
+  background-color: #288cdf;
 }
+
 @media screen and (min-width:680px){
   .container {
     display: flex;
